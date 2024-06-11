@@ -1,4 +1,3 @@
-
 # inicio importações
 
 from random import randint
@@ -27,7 +26,7 @@ marreta = {'nome':'marreta', 'dano' : 8, 'defesa': 5, 'critico': 1, }
 
 
 
-magias = ['nenhuma', 'fire', 'wind', 'earth', 'eletric', 'water']
+magias = ['none', 'fire', 'wind', 'earth', 'eletric', 'water']
 nmagias = magias.__len__() - 1
 
 
