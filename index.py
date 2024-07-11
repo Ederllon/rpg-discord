@@ -81,7 +81,7 @@ def ficha(x):
         
         
     if magias[mag] == 'amaldiçoado':
-        print('Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec)/10)))
+        print('Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec)/10-(magperc/10))))
     else:
         print('Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec)/10)))
         
