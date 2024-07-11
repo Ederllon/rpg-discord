@@ -23,10 +23,10 @@ pá = {'nome':'pá', 'dano' : 3, 'defesa': 4, 'critico': 0, }
 foice = {'nome':'foice', 'dano' : 6, 'defesa': 5, 'critico': 6, }
 trident = {'nome':'trident', 'dano' : 6, 'defesa': 6, 'critico': 6, }
 marreta = {'nome':'marreta', 'dano' : 8, 'defesa': 5, 'critico': 1, }
+chave = {'nome':'chave', 'dano' : 0, 'defesa': 0, 'critico': 1, }
 
 
-
-magias = ['none', 'fire', 'wind', 'earth', 'eletric', 'water']
+magias = ['nenhuma', 'fogo', 'vento', 'terra', 'elétrico', 'água', 'amaldiçoado']
 nmagias = magias.__len__() - 1
 
 
@@ -49,7 +49,9 @@ def ficha(x):
 
 # inicio dados com adicionaveis     
 
+
     anel = {'nome':'anel do poder', 'dano' : magperc, 'defesa': man, 'critico': maestria, }
+    chaveg = {'nome':'arco', 'dano' : 2, 'defesa': 5, 'critico': prec-1,}
     arco = {'nome':'arco', 'dano' : 3, 'defesa': 1, 'critico': prec, }
     cajado = {'nome':'cajado', 'dano' : int((magperc + maestria)/2), 'defesa': man, 'critico': maestria, }
     anel_de_energia = {'nome':'anel de energia', 'dano' : man, 'defesa': man, 'critico': man, }
@@ -57,11 +59,12 @@ def ficha(x):
     soco = {'nome':'soco inglês', 'dano' : atk , 'defesa': df-30, 'critico': -1 }
     luva = {'nom':'luvas', 'dano' : 1, 'defesa': 1, 'critico': atk-50,}
     pedra = {'nome':'pedra', 'dano' : atk-prec, 'defesa': 0, 'critico': prec, }
+    
 
 # fim dados com adicionaveis
     
     # inicio dados insert 
-    armas = [nenhuma, faca, bastão, sai,pedra, luva, cajado, espada, arco, machado, martelo, soco, lança, escudo, bengala, manopla, chicote, canivete, machete, pá, foice, marreta , anel, anel_de_energia]
+    armas = [nenhuma, faca, bastão, sai,pedra, luva, cajado, espada, arco, machado, martelo, soco, lança, escudo, bengala, manopla, chicote, canivete, machete, pá, foice, marreta , anel, anel_de_energia, chave, chaveg]
     narmas = armas.__len__() - 1
     # fim dados insert
     mag = int(randint(0,nmagias))
@@ -73,7 +76,15 @@ def ficha(x):
         maestria = 0   
       
 
-    print('Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec)/10)))
+      
+        
+        
+        
+    if magias[mag] == 'amaldiçoado':
+        print('Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec)/10)))
+    else:
+        print('Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec)/10)))
+        
     print('Vida:',hp)
     print('Força:',atk)
     print('Defesa:',df)
