@@ -79,12 +79,12 @@ def ficha(x):
       
         
         
-        #
+        #inicio de condição de "media de poder" 
     if magias[mag] == 'amaldiçoado':
         print('Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec)/10-(magperc/10))))
     else:
         print('Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec)/10)))
-        # 
+    #fim de condição de "media de poder"         
     print('Vida:',hp)
     print('Força:',atk)
     print('Defesa:',df)
