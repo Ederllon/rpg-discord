@@ -57,7 +57,7 @@ def ficha(x):
     anel_de_energia = {'nome':'anel de energia', 'dano' : man, 'defesa': man, 'critico': man, }
     sai = {'nome':'sai', 'dano' : 2, 'defesa': 2, 'critico': spd, }
     soco = {'nome':'soco inglês', 'dano' : atk , 'defesa': df-30, 'critico': -1 }
-    luva = {'nom':'luvas', 'dano' : 1, 'defesa': 1, 'critico': atk-50,}
+    luva = {'nome':'luvas', 'dano' : 1, 'defesa': 1, 'critico': atk-50,}
     pedra = {'nome':'pedra', 'dano' : atk-prec, 'defesa': 0, 'critico': prec, }
     
 
