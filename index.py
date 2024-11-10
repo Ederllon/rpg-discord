@@ -1,11 +1,10 @@
+
 # inicio importações
 
 from random import randint
-
 # fim importações
 
 # inicio dados                                                                                       
-
 nenhuma = {'nome':'nenhuma', 'dano' : 0, 'defesa': 0, 'critico': 0, }
 faca = {'nome':'faca', 'dano' : 2, 'defesa': 1, 'critico': 6, }
 bastão = {'nome':'bastão', 'dano' : 3, 'defesa': 5, 'critico': 0, }
@@ -60,11 +59,36 @@ def ficha(x):
     luva = {'nome':'luvas', 'dano' : 1, 'defesa': 1, 'critico': atk-50,}
     pedra = {'nome':'pedra', 'dano' : atk-prec, 'defesa': 0, 'critico': prec, }
     
+    livroDatabase = ['lc', 'mg', 'ch' ]
+
+    livroRand = randint(0,len(livroDatabase))
+    if livroRand > 0:
+        livroRand = livroRand - 1 
+    else:
+        livroRand = 0
+
+    if livroRand == 0:
+        livro = {'nome': 'Livro Comum' , 'dano' : 0, 'defesa': 0, 'critico': (man-10),}
+    else:
+        if livroRand == 1:
+            livro = {'nome': 'Livro de Magia Negra' , 'dano' : 2, 'defesa': 1, 'critico':1,}
+        else:
+            if livroRand == 2:
+                livro = {'nome': 'Livro de Humor/Comedia' , 'dano' : 0, 'defesa': car, 'critico':car,}
+                    
+        
+
+    
+
+    
+
+
+
 
 # fim dados com adicionaveis
     
     # inicio dados insert 
-    armas = [nenhuma, faca, bastão, sai,pedra, luva, cajado, espada, arco, machado, martelo, soco, lança, escudo, bengala, manopla, chicote, canivete, machete, pá, foice, marreta , anel, anel_de_energia, chave, chaveg]
+    armas = [nenhuma, faca, bastão, sai,pedra, luva, cajado, espada, arco, machado, martelo, soco, lança, escudo, bengala, manopla, chicote, canivete, machete, pá, foice, marreta , anel, anel_de_energia, chave, chaveg, livro]
     narmas = armas.__len__() - 1
     # fim dados insert
     mag = int(randint(0,nmagias))
@@ -81,9 +105,9 @@ def ficha(x):
         
         
     if magias[mag] == 'amaldiçoado':
-        print('Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec)/10-(magperc/10))))
+        print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec)/10-(magperc/10))))
     else:
-        print('Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec)/10)))
+        print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec)/10)))
         
     print('Vida:',hp)
     print('Força:',atk)
