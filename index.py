@@ -59,7 +59,7 @@ def ficha(x):
     luva = {'nome':'luvas', 'dano' : 1, 'defesa': 1, 'critico': atk-50,}
     pedra = {'nome':'pedra', 'dano' : atk-prec, 'defesa': 0, 'critico': prec, }
     
-    livroDatabase = ['lc', 'mg', 'ch' ]
+    livroDatabase = [1,2,3,4]
 
     livroRand = randint(0,len(livroDatabase))
     if livroRand > 0:
@@ -75,8 +75,9 @@ def ficha(x):
         else:
             if livroRand == 2:
                 livro = {'nome': 'Livro de Humor/Comedia' , 'dano' : 0, 'defesa': car, 'critico':car,}
-                    
-        
+            else:
+                if livroRand == 3:
+                    livro = {'nome': 'Livro de Romance' , 'dano' : 0, 'defesa': 0, 'critico':(hp+car-10),}
 
     
 
