@@ -59,7 +59,7 @@ def ficha(x):
     luva = {'nome':'luvas', 'dano' : 1, 'defesa': 1, 'critico': atk-50,}
     pedra = {'nome':'pedra', 'dano' : atk-prec, 'defesa': 0, 'critico': prec, }
     
-    livroDatabase = [1,2,3,4]
+    livroDatabase = [1,2,3,4,5,6,7,8,9,10]
 
     livroRand = randint(0,len(livroDatabase))
     if livroRand > 0:
@@ -78,9 +78,24 @@ def ficha(x):
             else:
                 if livroRand == 3:
                     livro = {'nome': 'Livro de Romance' , 'dano' : 0, 'defesa': 0, 'critico':(hp+car-10),}
-
-    
-
+                else:
+                    if livroRand == 4:
+                        livro = {'nome': 'Livro de Suspense' , 'dano' : (2+spd-car), 'defesa': 2, 'critico':(spd-car),}
+                    else:
+                        if livroRand == 5:
+                            livro = {'nome': 'Livro de Magia' , 'dano' : (man-25), 'defesa': man , 'critico':(man+car),}
+                        else:
+                            if livroRand == 6:
+                                livro = {'nome': 'Livro de Druida' , 'dano' : (car-25), 'defesa': car, 'critico':car,}
+                            else:
+                                if livroRand == 7:
+                                    livro = {'nome': 'Livro de Necromantico' , 'dano' : (100-car), 'defesa': (100-hp-man), 'critico':0,}
+                                else:
+                                    if livroRand == 8:
+                                        livro = {'nome': 'Livro de Paladino' , 'dano' : (100-atk), 'defesa': (df+car), 'critico':car,}
+                                    else:
+                                        if livroRand == 9:
+                                            livro = {'nome': 'Livro de Caça' , 'dano' : (atk+df-car), 'defesa': 0, 'critico':10,}
     
 
 
