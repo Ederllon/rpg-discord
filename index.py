@@ -59,7 +59,7 @@ def ficha(x):
     luva = {'nome':'luvas', 'dano' : 1, 'defesa': 1, 'critico': atk-50,}
     pedra = {'nome':'pedra', 'dano' : atk-prec, 'defesa': 0, 'critico': prec, }
     
-    livroDatabase = [1,2,3,4,5,6,7,8,9,10]
+    livroDatabase = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 
     livroRand = randint(0,len(livroDatabase))
     if livroRand > 0:
@@ -96,6 +96,25 @@ def ficha(x):
                                     else:
                                         if livroRand == 9:
                                             livro = {'nome': 'Livro de Caça' , 'dano' : (atk+df-car), 'defesa': 0, 'critico':10,}
+                                        else:
+                                            if livroRand == 10:
+                                                livro = {'nome': 'Livro Guia de Arte Marciais' , 'dano' : (atk-50), 'defesa':(df+25-atk) , 'critico':0,}
+                                            else:
+                                                if livroRand == 11:
+                                                    livro = {'nome': 'Diario Pessoal' , 'dano' : (car-50), 'defesa': (car-100), 'critico':0,}
+                                                else:
+                                                    if livroRand == 12:
+                                                        livro = {'nome': 'Livro de Caça' , 'dano' : luck, 'defesa': (luck+car), 'critico':luck,}
+                                                    else:    
+                                                        if livroRand == 13:
+                                                                livro = {'nome':'Livro do Heroi', 'dano' : (car-75), 'defesa': (df+car), 'critico': 0, }
+                                                        else:
+                                                            if livroRand == 14:
+                                                                livro = {'nome':'Livro do Vilão', 'dano' : (10+atk-car), 'defesa': (df-car), 'critico': (100-car), }
+                                                            
+
+                                                
+            
     
 
 
