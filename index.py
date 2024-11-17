@@ -25,6 +25,7 @@ marreta = {'nome':'marreta', 'dano' : 8, 'defesa': 5, 'critico': 1, }
 chave = {'nome':'chave', 'dano' : 0, 'defesa': 0, 'critico': 1, }
 
 
+
 magias = ['nenhuma', 'fogo', 'vento', 'terra', 'elétrico', 'água', 'amaldiçoado']
 nmagias = magias.__len__() - 1
 
@@ -58,8 +59,9 @@ def ficha(x):
     soco = {'nome':'soco inglês', 'dano' : atk , 'defesa': df-30, 'critico': -1 }
     luva = {'nome':'luvas', 'dano' : 1, 'defesa': 1, 'critico': atk-50,}
     pedra = {'nome':'pedra', 'dano' : atk-prec, 'defesa': 0, 'critico': prec, }
+    kunai = {'nome':'kunai', 'dano' : (spd+prec-30), 'defesa': 2, 'critico': (spd+prec-10), }
     
-    livroDatabase = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    livroDatabase = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 
     livroRand = randint(0,len(livroDatabase))
     if livroRand > 0:
@@ -111,6 +113,24 @@ def ficha(x):
                                                         else:
                                                             if livroRand == 14:
                                                                 livro = {'nome':'Livro do Vilão', 'dano' : (10+atk-car), 'defesa': (df-car), 'critico': (100-car), }
+                                                            else:
+                                                                if livroRand == 15:
+                                                                     livro = {'nome':'Livro de Receitas', 'dano' : 0, 'defesa': 0, 'critico': 1, }
+                                                                else:
+                                                                    if livroRand == 16:
+                                                                        livro = {'nome':'Livro +18', 'dano' : 0, 'defesa': 0, 'critico': 1, }
+                                                                    else:
+                                                                        if livroRand == 17:
+                                                                            livro = {'nome':'Livro Guia do Arqueiro', 'dano' : 0, 'defesa': 0, 'critico': 100, }
+                                                                        else:
+                                                                            if livroRand == 18:
+                                                                                livro = {'nome':'Livro dos Elfos', 'dano' : 0, 'defesa': (man-5), 'critico': 90, }
+                                                                            else:
+                                                                                if livroRand == 19:
+                                                                                    livro = {'nome':'Livro Satanico', 'dano' : (100-car), 'defesa': -100, 'critico': 0, }        
+
+                                                       
+                                                            
                                                             
 
                                                 
@@ -123,7 +143,7 @@ def ficha(x):
 # fim dados com adicionaveis
     
     # inicio dados insert 
-    armas = [nenhuma, faca, bastão, sai,pedra, luva, cajado, espada, arco, machado, martelo, soco, lança, escudo, bengala, manopla, chicote, canivete, machete, pá, foice, marreta , anel, anel_de_energia, chave, chaveg, livro]
+    armas = [nenhuma,kunai, faca, bastão, sai,pedra, luva, cajado, espada, arco, machado, martelo, soco, lança, escudo, bengala, manopla, chicote, canivete, machete, pá, foice, marreta , anel, anel_de_energia, chave, chaveg, livro]
     narmas = armas.__len__() - 1
     # fim dados insert
     mag = int(randint(0,nmagias))
@@ -135,10 +155,6 @@ def ficha(x):
         maestria = 0   
       
 
-      
-        
-        
-        
     if magias[mag] == 'amaldiçoado':
         print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec)/10-(magperc/10))))
     else:
@@ -149,12 +165,12 @@ def ficha(x):
     print('Defesa:',df)
     print('Velocidade:',spd)
     print('Carisma:', car)
-    print('Precisão: ',prec )
+    print('Precisão: ', prec)
     print('Sorte: ', luck)
-    print('Mana:',man)
-    print('Magia:',magias[mag])
+    print('Mana:', man)
+    print('Magia:', magias[mag])
     print('Maestria da Magia: {}%'.format(magperc))
-    print('Arma:',armas[arm])
+    print('Arma:', armas[arm])
     print('Maestria da Arma: {}%'.format(maestria))
     print(62*'-')
 
