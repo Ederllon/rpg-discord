@@ -60,7 +60,7 @@ def ficha(x):
     luva = {'nome':'luvas', 'dano' : 1, 'defesa': 1, 'critico': atk-50,}
     pedra = {'nome':'pedra', 'dano' : atk-prec, 'defesa': 0, 'critico': prec, }
     kunai = {'nome':'kunai', 'dano' : (spd+prec-30), 'defesa': 2, 'critico': (spd+prec-10), }
-    
+    shk = {'nome':'shiruken', 'dano' : (prec-50), 'defesa': -1, 'critico': 0, }
     livroDatabase = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 
     livroRand = randint(0,len(livroDatabase))
@@ -143,7 +143,7 @@ def ficha(x):
 # fim dados com adicionaveis
     
     # inicio dados insert 
-    armas = [nenhuma,kunai, faca, bastão, sai,pedra, luva, cajado, espada, arco, machado, martelo, soco, lança, escudo, bengala, manopla, chicote, canivete, machete, pá, foice, marreta , anel, anel_de_energia, chave, chaveg, livro]
+    armas = [nenhuma,kunai, shk, faca, bastão, sai,pedra, luva, cajado, espada, arco, machado, martelo, soco, lança, escudo, bengala, manopla, chicote, canivete, machete, pá, foice, marreta , anel, anel_de_energia, chave, chaveg, livro]
     narmas = armas.__len__() - 1
     # fim dados insert
     mag = int(randint(0,nmagias))
