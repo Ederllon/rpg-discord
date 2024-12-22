@@ -3,7 +3,16 @@
 
 from random import randint
 # fim importações
+subna1 = ['Al','Jam','Ada','Bal','Bel','Dan','Don','Dom','Can','Chru','Pe',]
+subna2 = ['Al','Jam','Ada','Bal','Bel','Dan','Don','Dom','Can','Chru','Pe','-',' ','',]
+subna3 = ['Al','Jam','Ada','Bal','Bel','Dan','Don','Dom','Can','Chru','Pe',' ','',]
 
+def nameGen(pri, sec, trh ):
+        
+    print('Sobrenome: ', subna1[pri]+subna2[sec]+subna3[trh])
+
+nameGen(int(len(subna1)-1),0,0)
+raise SystemExit("TEST FINISHED!")
 
 
 
@@ -35,6 +44,7 @@ nmagias = magias.__len__() - 1
 
 
 
+
 # fim dados
 
 # incio funções
@@ -53,11 +63,6 @@ def ficha(x):
     riq = int(randint(0,100))
 
     
-# def nameGen(pri, sec, trh ):
-#     n01 = ['Al','Jam','Ada','Bal','Bel','Dan','Don','Dom','Can','Chru','Pe',]
-#     n02 = ['Al','Jam','Ada','Bal','Bel','Dan','Don','Dom','Can','Chru','Pe','-',' ','',]
-#     n03 = ['Al','Jam','Ada','Bal','Bel','Dan','Don','Dom','Can','Chru','Pe',' ','',]
-#     print('Sobrenome: ', n01(pri)+n02(sec)+n03(trh))
 
 
 
