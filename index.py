@@ -3,16 +3,9 @@
 
 from random import randint
 # fim importações
-subna1 = ['Al','Jam','Ada','Bal','Bel','Dan','Don','Dom','Can','Chru','Pe',]
-subna2 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe',' ','',]
-subna3 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe',' ','',]
 
-def nameGen(pri, sec, trh ):
-        
-    print('Sobrenome: ', subna1[pri]+subna2[sec]+subna3[trh])
 
-nameGen(randint(0,int(len(subna1))),randint(0,int(len(subna2))),randint(0,int(len(subna3))))
-raise SystemExit("TEST FINISHED!")
+# raise SystemExit("TEST FINISHED!")
 
 
 
@@ -42,12 +35,18 @@ chave = {'nome':'chave', 'dano' : 0, 'defesa': 0, 'critico': 1, }
 magias = ['nenhuma', 'fogo', 'vento', 'terra', 'elétrico', 'água', 'amaldiçoado']
 nmagias = magias.__len__() - 1
 
+subna1 = ['Al','Jam','Ada','Bal','Bel','Dan','Don','Dom','Can','Chru','Pe',]
+subna2 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe','',]
+subna3 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe',' ','',]
+
 
 
 
 # fim dados
 
 # incio funções
+def nameGen(pri, sec, trh ):
+    print('Afiliação: ', subna1[pri]+subna2[sec]+subna3[trh])
 
 def ficha(x):
     hp = int(randint(1,100))
@@ -61,7 +60,6 @@ def ficha(x):
     luck = int(randint(1,100))
     prec = int(randint(1,100))
     riq = int(randint(0,100))
-
     
 
 
@@ -172,12 +170,12 @@ def ficha(x):
     if arm == 0:
         maestria = 0   
       
-
+    
     if magias[mag] == 'amaldiçoado':
         print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec+riq)/11-(magperc/10))))
     else:
         print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec+riq)/11)))
-        
+    
     print('Vida:',hp)
     print('Força:',atk)
     print('Defesa:',df)
@@ -191,6 +189,7 @@ def ficha(x):
     print('Arma:', armas[arm])
     print('Maestria da Arma: {}%'.format(maestria))
     print('Riqueza:', riq)
+    nameGen(randint(0,int(len(subna1)-1)),randint(0,int(len(subna2)-1)),randint(0,int(len(subna3)-1)))
     print(62*'-')
 
 # fim funções
