@@ -192,7 +192,7 @@ def ficha(x):
     print(62*'-')
 
 # fim funções
-    
+     
 # inicio body
     
 while True:
