@@ -4,14 +4,14 @@
 from random import randint
 # fim importações
 subna1 = ['Al','Jam','Ada','Bal','Bel','Dan','Don','Dom','Can','Chru','Pe',]
-subna2 = ['Al','Jam','Ada','Bal','Bel','Dan','Don','Dom','Can','Chru','Pe','-',' ','',]
-subna3 = ['Al','Jam','Ada','Bal','Bel','Dan','Don','Dom','Can','Chru','Pe',' ','',]
+subna2 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe',' ','',]
+subna3 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe',' ','',]
 
 def nameGen(pri, sec, trh ):
         
     print('Sobrenome: ', subna1[pri]+subna2[sec]+subna3[trh])
 
-nameGen(int(len(subna1)-1),0,0)
+nameGen(randint(0,int(len(subna1))),randint(0,int(len(subna2))),randint(0,int(len(subna3))))
 raise SystemExit("TEST FINISHED!")
 
 
