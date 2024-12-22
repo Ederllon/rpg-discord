@@ -3,7 +3,7 @@
 
 from random import randint
 # fim importações
- 
+
 
 # raise SystemExit("TEST FINISHED!")
 
@@ -29,6 +29,7 @@ foice = {'nome':'foice', 'dano' : 6, 'defesa': 5, 'critico': 6, }
 trident = {'nome':'trident', 'dano' : 6, 'defesa': 6, 'critico': 6, }
 marreta = {'nome':'marreta', 'dano' : 8, 'defesa': 5, 'critico': 1, }
 chave = {'nome':'chave', 'dano' : 0, 'defesa': 0, 'critico': 1, }
+
 
 
 
@@ -172,7 +173,7 @@ def ficha(x):
       
     
     if magias[mag] == 'amaldiçoado':
-        print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec+riq)/11-(magperc/10))))
+        print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec+riq)/11-(magperc/11))))
     else:
         print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec+riq)/11)))
     print('Vida:',hp)
