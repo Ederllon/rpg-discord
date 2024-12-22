@@ -46,7 +46,7 @@ subna3 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe',' ','
 
 # incio funções
 def nameGen(pri, sec, trh ):
-    print('Afiliação:', subna1[pri]+subna2[sec]+subna3[trh])
+    print('Afiliação:', str(subna1[pri]).capitalize()+subna2[sec]+subna3[trh])
 
 def ficha(x):
     hp = int(randint(1,100))
@@ -189,7 +189,7 @@ def ficha(x):
     print('Arma:', armas[arm])
     print('Maestria da Arma: {}%'.format(maestria))
     print('Riqueza:', riq)
-    AfStr = str(nameGen(randint(0,int(len(subna1)-1)),randint(0,int(len(subna2)-1)),randint(0,int(len(subna3)-1))))
+    nameGen(randint(0,int(len(subna1)-1)),randint(0,int(len(subna2)-1)),randint(0,int(len(subna3)-1)))
     print(62*'-')
 
 # fim funções
