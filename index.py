@@ -35,9 +35,9 @@ chave = {'nome':'chave', 'dano' : 0, 'defesa': 0, 'critico': 1, }
 magias = ['nenhuma', 'fogo', 'vento', 'terra', 'elétrico', 'água', 'amaldiçoado']
 nmagias = magias.__len__() - 1
 
-subna1 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe','a']
-subna2 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe','','k','th','ph']
-subna3 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe',' ','','k','th','ph']
+subna1 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe','a','e','i','o','u','y','oto','shik','Thi','Thy','cha','pe','si','sil','sh']
+subna2 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe','','k','th','ph','oto','ha','cha','dro','si','sil','va','','','','','ko','sh']
+subna3 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe','','','k','th','ph','a','e','i','o','u','y','te','maru','ha','cha','si','sil','','','ko','sh']
 
 
 
@@ -45,8 +45,8 @@ subna3 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe',' ','
 # fim dados
 
 # incio funções
-def nameGen(pri, sec, trh ):
-    print('Afiliação:', str(subna1[pri]).capitalize()+subna2[sec]+subna3[trh])
+def nameGen(pri, sec, trh, rvalue ):
+    print('Herança: {} | Afiliação: {}'.format(rvalue,str(subna1[pri]).capitalize()+subna2[sec]+subna3[trh]))
 
 def ficha(x):
     hp = int(randint(1,100))
@@ -175,7 +175,6 @@ def ficha(x):
         print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec+riq)/11-(magperc/10))))
     else:
         print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec+riq)/11)))
-    
     print('Vida:',hp)
     print('Força:',atk)
     print('Defesa:',df)
@@ -188,8 +187,7 @@ def ficha(x):
     print('Maestria da Magia: {}%'.format(magperc))
     print('Arma:', armas[arm])
     print('Maestria da Arma: {}%'.format(maestria))
-    print('Riqueza:', riq)
-    nameGen(randint(0,int(len(subna1)-1)),randint(0,int(len(subna2)-1)),randint(0,int(len(subna3)-1)))
+    nameGen(randint(0,int(len(subna1)-1)),randint(0,int(len(subna2)-1)),randint(0,int(len(subna3)-1)),riq)   
     print(62*'-')
 
 # fim funções
