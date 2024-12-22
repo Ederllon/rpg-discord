@@ -35,9 +35,9 @@ chave = {'nome':'chave', 'dano' : 0, 'defesa': 0, 'critico': 1, }
 magias = ['nenhuma', 'fogo', 'vento', 'terra', 'elétrico', 'água', 'amaldiçoado']
 nmagias = magias.__len__() - 1
 
-subna1 = ['Al','Jam','Ada','Bal','Bel','Dan','Don','Dom','Can','Chru','Pe',]
-subna2 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe','',]
-subna3 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe',' ','',]
+subna1 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe','a']
+subna2 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe','','k','th','ph']
+subna3 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe',' ','','k','th','ph']
 
 
 
@@ -46,7 +46,7 @@ subna3 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe',' ','
 
 # incio funções
 def nameGen(pri, sec, trh ):
-    print('Afiliação: ', subna1[pri]+subna2[sec]+subna3[trh])
+    print('Afiliação:', subna1[pri]+subna2[sec]+subna3[trh])
 
 def ficha(x):
     hp = int(randint(1,100))
@@ -189,7 +189,7 @@ def ficha(x):
     print('Arma:', armas[arm])
     print('Maestria da Arma: {}%'.format(maestria))
     print('Riqueza:', riq)
-    nameGen(randint(0,int(len(subna1)-1)),randint(0,int(len(subna2)-1)),randint(0,int(len(subna3)-1)))
+    AfStr = str(nameGen(randint(0,int(len(subna1)-1)),randint(0,int(len(subna2)-1)),randint(0,int(len(subna3)-1))))
     print(62*'-')
 
 # fim funções
