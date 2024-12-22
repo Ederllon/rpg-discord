@@ -3,7 +3,7 @@
 
 from random import randint
 # fim importações
-
+ 
 
 # raise SystemExit("TEST FINISHED!")
 
