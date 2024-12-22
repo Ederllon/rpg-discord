@@ -4,6 +4,10 @@
 from random import randint
 # fim importações
 
+
+
+
+
 # inicio dados                                                                                       
 nenhuma = {'nome':'nenhuma', 'dano' : 0, 'defesa': 0, 'critico': 0, }
 faca = {'nome':'faca', 'dano' : 2, 'defesa': 1, 'critico': 6, }
@@ -46,6 +50,17 @@ def ficha(x):
     maestria = int(randint(1,100))
     luck = int(randint(1,100))
     prec = int(randint(1,100))
+    riq = int(randint(0,100))
+
+    
+# def nameGen(pri, sec, trh ):
+#     n01 = ['Al','Jam','Ada','Bal','Bel','Dan','Don','Dom','Can','Chru','Pe',]
+#     n02 = ['Al','Jam','Ada','Bal','Bel','Dan','Don','Dom','Can','Chru','Pe','-',' ','',]
+#     n03 = ['Al','Jam','Ada','Bal','Bel','Dan','Don','Dom','Can','Chru','Pe',' ','',]
+#     print('Sobrenome: ', n01(pri)+n02(sec)+n03(trh))
+
+
+
 
 # inicio dados com adicionaveis     
 
@@ -129,14 +144,12 @@ def ficha(x):
                                                                                 if livroRand == 19:
                                                                                     livro = {'nome':'Livro Satanico', 'dano' : (100-car), 'defesa': -100, 'critico': 0, }        
 
-                                                       
-                                                            
+
+
                                                             
 
                                                 
             
-    
-
 
 
 
@@ -156,9 +169,9 @@ def ficha(x):
       
 
     if magias[mag] == 'amaldiçoado':
-        print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec)/10-(magperc/10))))
+        print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec+riq)/11-(magperc/10))))
     else:
-        print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec)/10)))
+        print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec+riq)/11)))
         
     print('Vida:',hp)
     print('Força:',atk)
@@ -172,6 +185,7 @@ def ficha(x):
     print('Maestria da Magia: {}%'.format(magperc))
     print('Arma:', armas[arm])
     print('Maestria da Arma: {}%'.format(maestria))
+    print('Riqueza:', riq)
     print(62*'-')
 
 # fim funções
