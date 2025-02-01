@@ -80,7 +80,7 @@ def ficha(x):
     pedra = {'nome':'pedra', 'dano' : atk-prec, 'defesa': 0, 'critico': prec, }
     kunai = {'nome':'kunai', 'dano' : (spd+prec-30), 'defesa': 2, 'critico': (spd+prec-10), }
     shk = {'nome':'shiruken', 'dano' : (prec-50), 'defesa': -1, 'critico': 0, }
-    livroDatabase = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+    livroDatabase = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]
 
     livroRand = randint(0,len(livroDatabase))
     if livroRand > 0:
@@ -146,7 +146,10 @@ def ficha(x):
                                                                                 livro = {'nome':'Livro dos Elfos', 'dano' : 0, 'defesa': (man-5), 'critico': 90, }
                                                                             else:
                                                                                 if livroRand == 19:
-                                                                                    livro = {'nome':'Livro Satanico', 'dano' : (100-car), 'defesa': -100, 'critico': 0, }        
+                                                                                    livro = {'nome':'Livro Satanico', 'dano' : (100-car), 'defesa': -100, 'critico': 0, }  
+                                                                                else:
+                                                                                    if livroRand == 20:      
+                                                                                        livro = {'nome':'Livro Religioso', 'dano' : 0, 'defesa': man, 'critico': 0, }
 
 
 
