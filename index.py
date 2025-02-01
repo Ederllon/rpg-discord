@@ -149,7 +149,7 @@ def ficha(x):
                                                                                     livro = {'nome':'Livro Satanico', 'dano' : (100-car), 'defesa': -100, 'critico': 0, }  
                                                                                 else:
                                                                                     if livroRand == 20:      
-                                                                                        livro = {'nome':'Livro Religioso', 'dano' : 0, 'defesa': man, 'critico': 0, }
+                                                                                        livro = {'nome':'Livro Religioso', 'dano' : 0, 'defesa': int((man)-(man/5+(5))), 'critico': 0, }
 
 
 
