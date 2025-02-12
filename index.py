@@ -158,7 +158,8 @@ def ficha(x):
   
     style_fightDatabase = [1,2]            
     style_fightRandom = randint(1,len(style_fightDatabase)) 
-    print(style_fightRandom)
+
+   
     if style_fightRandom == 1:
         style_fight = {'nome':'estilo de luta karate', 'dano' : int((spd+atk- man)) , 'defesa': int(df/10), 'critico': 0, }
     else:
