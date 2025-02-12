@@ -4,7 +4,6 @@
 from random import randint
 # fim importações
 
-
 # raise SystemExit("TEST FINISHED!")
 
 
@@ -89,81 +88,89 @@ def ficha(x):
         livroRand = 0
 
     if livroRand == 0:
-        livro = {'nome': 'Livro Comum' , 'dano' : 0, 'defesa': 0, 'critico': (man-10),}
+        livro = {'nome': 'livro comum' , 'dano' : 0, 'defesa': 0, 'critico': (man-10),}
     else:
         if livroRand == 1:
-            livro = {'nome': 'Livro de Magia Negra' , 'dano' : 2, 'defesa': 1, 'critico':1,}
+            livro = {'nome': 'livro de magia negra' , 'dano' : 2, 'defesa': 1, 'critico':1,}
         else:
             if livroRand == 2:
-                livro = {'nome': 'Livro de Humor/Comedia' , 'dano' : 0, 'defesa': car, 'critico':car,}
+                livro = {'nome': 'livro de humor/comedia' , 'dano' : 0, 'defesa': car, 'critico':car,}
             else:
                 if livroRand == 3:
-                    livro = {'nome': 'Livro de Romance' , 'dano' : 0, 'defesa': 0, 'critico':(hp+car-10),}
+                    livro = {'nome': 'livro de romance' , 'dano' : 0, 'defesa': 0, 'critico':(hp+car-10),}
                 else:
                     if livroRand == 4:
-                        livro = {'nome': 'Livro de Suspense' , 'dano' : (2+spd-car), 'defesa': 2, 'critico':(spd-car),}
+                        livro = {'nome': 'livro de suspense' , 'dano' : (2+spd-car), 'defesa': 2, 'critico':(spd-car),}
                     else:
                         if livroRand == 5:
-                            livro = {'nome': 'Livro de Magia' , 'dano' : (man-25), 'defesa': man , 'critico':(man+car),}
+                            livro = {'nome': 'livro de magia' , 'dano' : (man-25), 'defesa': man , 'critico':(man+car),}
                         else:
                             if livroRand == 6:
-                                livro = {'nome': 'Livro de Druida' , 'dano' : (car-25), 'defesa': car, 'critico':car,}
+                                livro = {'nome': 'livro de druida' , 'dano' : (car-25), 'defesa': car, 'critico':car,}
                             else:
                                 if livroRand == 7:
-                                    livro = {'nome': 'Livro de Necromantico' , 'dano' : (100-car), 'defesa': (100-hp-man), 'critico':0,}
+                                    livro = {'nome': 'livro de necromantico' , 'dano' : (100-car), 'defesa': (100-hp-man), 'critico':0,}
                                 else:
                                     if livroRand == 8:
-                                        livro = {'nome': 'Livro de Paladino' , 'dano' : (100-atk), 'defesa': (df+car), 'critico':car,}
+                                        livro = {'nome': 'livro de paladino' , 'dano' : (100-atk), 'defesa': (df+car), 'critico':car,}
                                     else:
                                         if livroRand == 9:
-                                            livro = {'nome': 'Livro de Caça' , 'dano' : (atk+df-car), 'defesa': 0, 'critico':10,}
+                                            livro = {'nome': 'livro de caça' , 'dano' : (atk+df-car), 'defesa': 0, 'critico':10,}
                                         else:
                                             if livroRand == 10:
-                                                livro = {'nome': 'Livro Guia de Arte Marciais' , 'dano' : (atk-50), 'defesa':(df+25-atk) , 'critico':0,}
+                                                livro = {'nome': 'livro guia de arte marciais' , 'dano' : (atk-50), 'defesa':(df+25-atk) , 'critico':0,}
                                             else:
                                                 if livroRand == 11:
-                                                    livro = {'nome': 'Diario Pessoal' , 'dano' : (car-50), 'defesa': (car-100), 'critico':0,}
+                                                    livro = {'nome': 'diario pessoal' , 'dano' : (car-50), 'defesa': (car-100), 'critico':0,}
                                                 else:
                                                     if livroRand == 12:
-                                                        livro = {'nome': 'Livro de Caça' , 'dano' : luck, 'defesa': (luck+car), 'critico':luck,}
+                                                        livro = {'nome': 'livro de caça' , 'dano' : luck, 'defesa': (luck+car), 'critico':luck,}
                                                     else:    
                                                         if livroRand == 13:
-                                                                livro = {'nome':'Livro do Heroi', 'dano' : (car-75), 'defesa': (df+car), 'critico': 0, }
+                                                                livro = {'nome':'livro do heroi', 'dano' : (car-75), 'defesa': (df+car), 'critico': 0, }
                                                         else:
                                                             if livroRand == 14:
-                                                                livro = {'nome':'Livro do Vilão', 'dano' : (10+atk-car), 'defesa': (df-car), 'critico': (100-car), }
+                                                                livro = {'nome':'livro do vilão', 'dano' : (10+atk-car), 'defesa': (df-car), 'critico': (100-car), }
                                                             else:
                                                                 if livroRand == 15:
-                                                                     livro = {'nome':'Livro de Receitas', 'dano' : 0, 'defesa': 0, 'critico': 1, }
+                                                                     livro = {'nome':'livro de receitas', 'dano' : 0, 'defesa': 0, 'critico': 1, }
                                                                 else:
                                                                     if livroRand == 16:
-                                                                        livro = {'nome':'Livro +18', 'dano' : 0, 'defesa': 0, 'critico': 1, }
+                                                                        livro = {'nome':'livro +18', 'dano' : 0, 'defesa': 0, 'critico': 1, }
                                                                     else:
                                                                         if livroRand == 17:
-                                                                            livro = {'nome':'Livro Guia do Arqueiro', 'dano' : 0, 'defesa': 0, 'critico': 100, }
+                                                                            livro = {'nome':'livro guia do arqueiro', 'dano' : 0, 'defesa': 0, 'critico': 100, }
                                                                         else:
                                                                             if livroRand == 18:
-                                                                                livro = {'nome':'Livro dos Elfos', 'dano' : 0, 'defesa': (man-5), 'critico': 90, }
+                                                                                livro = {'nome':'livro dos elfos', 'dano' : 0, 'defesa': (man-5), 'critico': 90, }
                                                                             else:
                                                                                 if livroRand == 19:
-                                                                                    livro = {'nome':'Livro Satanico', 'dano' : (100-car), 'defesa': -100, 'critico': 0, }  
+                                                                                    livro = {'nome':'livro satanico', 'dano' : (100-car), 'defesa': -100, 'critico': 0, }  
                                                                                 else:
                                                                                     if livroRand == 20:      
-                                                                                        livro = {'nome':'Livro Religioso', 'dano' : 0, 'defesa': int((man)-(man/5+(5))), 'critico': 0, }
+                                                                                        livro = {'nome':'livro religioso', 'dano' : 0, 'defesa': int((man)-(man/5+(5))), 'critico': 0, }
 
 
 
                                                             
 
                                                 
-            
-
+  
+    style_fightDatabase = [1,2]            
+    style_fightRandom = randint(1,len(style_fightDatabase)) 
+    print(style_fightRandom)
+    if style_fightRandom == 1:
+        style_fight = {'nome':'estilo de luta karate', 'dano' : int((spd+atk- man)) , 'defesa': int(df/10), 'critico': 0, }
+    else:
+        if style_fightRandom == 2:
+            style_fight = {'nome':'estilo de luta boxe', 'dano' : spd+atk-car-25, 'defesa': df, 'critico': 0, }
 
 
 # fim dados com adicionaveis
     
     # inicio dados insert 
-    armas = [nenhuma,kunai, shk, faca, bastão, sai,pedra, luva, cajado, espada, arco, machado, martelo, soco, lança, escudo, bengala, manopla, chicote, canivete, machete, pá, foice, marreta , anel, anel_de_energia, chave, chaveg, livro]
+    armas = [nenhuma,kunai, shk, faca, bastão, sai,pedra, luva, cajado, espada, arco, machado, martelo, soco, lança, escudo, bengala, manopla, chicote, canivete, machete, pá, foice, marreta , anel, anel_de_energia, chave, chaveg, livro, style_fight,]
+    
     narmas = armas.__len__() - 1
     # fim dados insert
     mag = int(randint(0,nmagias))
@@ -171,10 +178,14 @@ def ficha(x):
 
     if mag == 0:
         magperc = 0
-    if arm == 0:
-        maestria = 0   
+
       
     
+    newRandArm =  armas[arm]
+    
+    if newRandArm["nome"] == "nenhuma":
+        maestria = 0
+
     if magias[mag] == 'amaldiçoado':
         print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec+riq)/11-(magperc/11))))
     else:
@@ -189,7 +200,7 @@ def ficha(x):
     print('Mana:', man)
     print('Magia:', magias[mag])
     print('Maestria da Magia: {}%'.format(magperc))
-    print('Arma:', armas[arm])
+    print('Arma:', newRandArm)
     print('Maestria da Arma: {}%'.format(maestria))
     nameGen(randint(0,int(len(subna1)-1)),randint(0,int(len(subna2)-1)),randint(0,int(len(subna3)-1)),riq)   
     print(62*'-')
