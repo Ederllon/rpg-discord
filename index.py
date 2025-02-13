@@ -157,7 +157,7 @@ def ficha(x):
 
                                                 
   
-    style_fightDatabase = [1,2]            
+    style_fightDatabase = [1,2,3,4,5]            
     style_fightRandom = randint(1,len(style_fightDatabase)) 
 
    
@@ -166,6 +166,15 @@ def ficha(x):
     else:
         if style_fightRandom == 2:
             style_fight = {'nome':'estilo de luta boxe', 'dano' : spd+atk-car-25, 'defesa': df, 'critico': 0, }
+        else:
+            if style_fightRandom == 3:
+                style_fight = {'nome':'estilo de jiu-jitsu', 'dano' : df-1, 'defesa': df, 'critico': 1, }
+            else:
+                if style_fightRandom == 4:
+                    style_fight = {'nome':'estilo de luta judo', 'dano' : df, 'defesa': df, 'critico': 0, }
+                else:
+                    if style_fightRandom == 5:
+                        style_fight = {'nome':'estilo de luta mma', 'dano' : 5, 'defesa': df+spd, 'critico': 1, }
 
 
 # fim dados com adicionaveis
