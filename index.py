@@ -32,7 +32,7 @@ chave = {'nome':'chave', 'dano' : 0, 'defesa': 0, 'critico': 1, }
 
 
 
-magias = ['nenhuma', 'fogo', 'vento', 'terra', 'elétrico', 'água', 'amaldiçoado']
+magias = ['nenhuma', 'fogo', 'vento', 'terra', 'elétrico', 'água', 'amaldiçoado', 'ansiedade']
 nmagias = magias.__len__() - 1
 
 subna1 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe','a','e','i','o','u','y','oto','shik','Thi','Thy','cha','pe','si','sil','sh','ko','no','ha','kyo','za','mu','yu','ri','yuri','yuta','shi','ra','ryu','shira','ka','orochi','maru','ki']
@@ -187,7 +187,7 @@ def ficha(x):
     mag = int(randint(0,nmagias))
     arm = int(randint(0,narmas))
 
-    if mag == 0:
+    if magias[mag] == "nenhuma":
         magperc = 0
 
       
@@ -200,7 +200,12 @@ def ficha(x):
     if magias[mag] == 'amaldiçoado':
         print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec+riq)/11-(magperc/11))))
     else:
-        print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec+riq)/11)))
+        if magias[mag] == 'ansiedade':
+            print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+luck+prec+riq)/10)))
+        else:
+            print(' Ficha: #{} | Média De Poder: {}'.format(x,  int((hp+atk+df+spd+car+man+maestria+magperc+luck+prec+riq)/11)))
+            
+    
     print('Vida:',hp)
     print('Força:',atk)
     print('Defesa:',df)
@@ -238,4 +243,4 @@ while True:
         break
 
 
-# fim body 
+# fim body 5
