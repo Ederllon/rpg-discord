@@ -35,9 +35,9 @@ chave = {'nome':'chave', 'dano' : 0, 'defesa': 0, 'critico': 1, }
 magias = ['nenhuma', 'fogo', 'vento', 'terra', 'elétrico', 'água', 'amaldiçoado', 'ansiedade']
 nmagias = magias.__len__() - 1
 
-subna1 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe','a','e','i','o','u','y','oto','shik','Thi','Thy','cha','pe','si','sil','sh','ko','no','ha','kyo','za','mu','yu','ri','yuri','yuta','shi','ra','ryu','shira','ka','orochi','maru','ki']
-subna2 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe','','k','th','ph','oto','ha','cha','dro','si','sil','va','','','','','ko','sh','ap','ko','no','ha','maru','kyo','za','moth','mu','yu','ri','yuri','yuta','shi','ra','ryu','shira','ka','orochi','maru','ki']
-subna3 = ['al','jam','ada','bal','bel','dan','don','dom','can','chru','pe','','','k','th','ph','a','e','i','o','u','y','te','maru','ha','cha','si','sil','','','ko','sh','ap','kyo','ko','no','ha','maru','za','moth','mu','yu','ri','yuri','yuta','shi','ra','ryu','shira','ka','orochi','maru','ki']
+subna1 = ['tsu','al','jam','ada','bal','bel','dan','don','dom','can','chru','pe','a','e','i','o','u','y','oto','shik','Thi','Thy','cha','pe','si','sil','sh','ko','no','ha','kyo','za','mu','yu','ri','yuri','yuta','shi','ra','ryu','shira','ka','orochi','maru','ki']
+subna2 = ['tsu','al','jam','ada','bal','bel','dan','don','dom','can','chru','pe','','k','th','ph','oto','ha','cha','dro','si','sil','va','','','','','ko','sh','ap','ko','no','ha','maru','kyo','za','moth','mu','yu','ri','yuri','yuta','shi','ra','ryu','shira','ka','orochi','maru','ki']
+subna3 = ['tsu','al','jam','ada','bal','bel','dan','don','dom','can','chru','pe','','','k','th','ph','a','e','i','o','u','y','te','maru','ha','cha','si','sil','','','ko','sh','ap','kyo','ko','no','ha','maru','za','moth','mu','yu','ri','yuri','yuta','shi','ra','ryu','shira','ka','orochi','maru','ki']
 
 
 
