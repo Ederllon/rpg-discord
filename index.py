@@ -168,7 +168,7 @@ def ficha(x):
             style_fight = {'nome':'estilo de luta boxe', 'dano' : spd+atk-car-25, 'defesa': df, 'critico': 0, }
         else:
             if style_fightRandom == 3:
-                style_fight = {'nome':'estilo de jiu-jitsu', 'dano' : df-1, 'defesa': df, 'critico': 1, }
+                style_fight = {'nome':'estilo de luta jiu-jitsu', 'dano' : df-1, 'defesa': df, 'critico': 1, }
             else:
                 if style_fightRandom == 4:
                     style_fight = {'nome':'estilo de luta judo', 'dano' : df, 'defesa': df, 'critico': 0, }
